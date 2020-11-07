@@ -6,16 +6,16 @@ const app = express();
 app.use(bodyParser.json())
 
 app.post('/events', (req,res) => {
-    const event = req.body;
-    console.log('received', req.body.type)
+    console.log('event received', req.body.type);
 
-    axios.post('http://localhost:4000/events', event).then(result => console.log(result)).catch(err => console.log(err))
-    axios.post('http://localhost:4001/events', event).then(result => console.log(result)).catch(err => console.log(err))
-    axios.post('http://localhost:4002/events', event).then(result => console.log(result)).catch(err => console.log(err))
-    axios.post('http://localhost:4003/events', event).then(result => console.log(result)).catch(err => console.log(err))
+    const event = req.body;
+
+    axios.post('http://localhost:4000/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4000'))
+    axios.post('http://localhost:4001/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4001'))
+    axios.post('http://localhost:4002/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4002'))
+    axios.post('http://localhost:4003/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4003'))
 
     res.send({ status: 'OK'});
-
 
 })
 
