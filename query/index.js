@@ -8,8 +8,6 @@ app.use(bodyParser.json())
 app.use(cors());
 
 // here is where we store posts
-const posts = {};
-
 // //ex
 // posts === {
 //     'laksjdf': {
@@ -20,6 +18,8 @@ const posts = {};
 //         ]
 //     }
 // }
+
+const posts = {};
 
 const handleEvent = (type, data) => {
     if(type === 'PostCreated') {
@@ -68,6 +68,7 @@ app.post('/events', (req, res) => {
 app.listen(4002, async () => {
     console.log('Listening on 4002')
 
+    // in case the query service goes down, as we start the query service we reach out and get all events
     const res = await axios.get('http://localhost:4005/events')
 
     for (let event of res.data) {
