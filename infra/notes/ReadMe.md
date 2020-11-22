@@ -16,5 +16,13 @@
 4. Run deployment command
     kubectl rollout restart deployment posts-depl
 
+Run container locally:
+    kubectl get services = reveals the 5 digit port that you container is running on
+
+    kubectl describe service posts-srv = get the details of a certain service
+
+    
+
 # Notes
 1. A deployment manages one or more pods. You can update all pods through the deployment
+
