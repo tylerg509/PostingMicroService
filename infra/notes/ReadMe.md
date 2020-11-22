@@ -9,7 +9,7 @@
 
 # UPDATE - method 2
 1. make change to code
-2. Build the image
+2. Build the image from the app's directory
     docker build -t tylerg509/tylerposts .  
 3. Push image to docker hub
     docker push tylerg509/tylerposts   
