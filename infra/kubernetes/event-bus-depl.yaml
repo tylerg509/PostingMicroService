@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
         - name: event-bus
-          image: tylerg509/tyler-event-bus:latest
+          image: tylerg509/event-bus:latest
 
 ---
 apiVersion: v1

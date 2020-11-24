@@ -9,16 +9,11 @@ const events = []
 
 app.post('/events', (req,res) => {
     console.log('event received', req.body.type);
-
     const event = req.body;
 
     events.push(event)
 
-    axios.post('http://posts-clusterip-srv:4000/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4000'))
-    // axios.post('http://localhost:4001/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4001'))
-    // axios.post('http://localhost:4002/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4002'))
-    // axios.post('http://localhost:4003/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4003'))
-
+    axios.post('http://posts-clusterip-srv:4000/events', event).then(result => {}).catch(err => console.log(err)).finally(console.log('ran 4000 srv'))
     res.send({ status: 'OK'});
 
 })

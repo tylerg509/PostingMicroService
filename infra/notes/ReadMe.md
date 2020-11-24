@@ -1,6 +1,10 @@
 # CREATE
 1. Create pod: kubectle apply -f posts.yaml (after creating run kubectl get pods to see status of pod)
 
+# Update config file
+1. Update event-bus.depl.yaml
+2. In order to take effect run command kubectl apply -f posts-depl.yaml
+
 # UPDATE - method 1
 1. Make a change to your project code
 2. Rebuild the image specify a new version number (docker build -t tylerposts:0.0.5)
@@ -10,7 +14,7 @@
 # UPDATE - method 2
 1. make change to code
 2. Build the image from the app's directory
-    docker build -t tylerg509/tylerposts .  
+    docker build -t tylerg509/tylerposts:latest .  
 3. Push image to docker hub
     docker push tylerg509/tylerposts   
 4. Run deployment command
