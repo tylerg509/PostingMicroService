@@ -1,3 +1,8 @@
+# running on posts.com for local dev
+1. on mac go to code /etc/hosts 
+2. at bottom of host file add: 127.0.0.1 posts.com
+3. when you connet to post.com connect to local machine
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
