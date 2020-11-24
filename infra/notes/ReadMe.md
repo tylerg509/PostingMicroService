@@ -5,6 +5,10 @@
 1. Update event-bus.depl.yaml
 2. In order to take effect run command kubectl apply -f posts-depl.yaml
 
+# Update all config fiels
+1. Update a file in infra/kubernetes
+2. kubectl apply -f .
+
 # UPDATE - method 1
 1. Make a change to your project code
 2. Rebuild the image specify a new version number (docker build -t tylerposts:0.0.5)
