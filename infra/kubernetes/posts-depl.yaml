@@ -14,7 +14,7 @@ spec:
     spec: 
       containers:
         - name: posts
-          image: tylerg509/tylerposts:latest
+          image: tylerg509/posts:latest
 
 
 ---
